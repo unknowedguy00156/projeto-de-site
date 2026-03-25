@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display", serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: var(--hero-bg);
+    border-bottom: 1px solid #ffd5ec;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.produtos, .contato {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.grid {
+    margin-top: 30px;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: var(--card);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    max-width: 300px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Tema claro (padrão) */
+:root {
+    --bg: #fafafa;
+    --text: #444;
+    --card: #fff;
+    --accent: #ff7ac4;
+    --hero-bg: #ffeaf6;
+}
+
+/* Tema escuro automático */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #121212;
+        --text: #eaeaea;
+        --card: #1e1e1e;
+        --accent: #ff93d6;
+        --hero-bg: #1a1a1a;
+    }
+}
+
+
+h1, h2, h3, p, a, footer, .hero, .produtos, .contato {
+    color: var(--text);
+}
